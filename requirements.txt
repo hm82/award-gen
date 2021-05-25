@@ -1,0 +1,4 @@
+click
+flask
+imgkit # requires import wkhtmltopdf
+gunicorn
