@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Certificate{% endblock %}
+
+{% block content %}
+<h1> Certificate for {{ user_name }} </h1> 
+<body>
+    <p>
+    <img src={{ url_for('get_certs', cert_filename = user_cert) }} alt="User Certificate for {{ user_name }}">
+    </p>
+    <p><a href="{{url_for('get_certs', cert_filename = user_cert)}}">Download Certificate</a> </p>
+<body>
+{% endblock %}
