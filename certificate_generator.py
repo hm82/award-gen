@@ -6,7 +6,7 @@ class Certificate:
 	Defines an certificate with the following attributes:
 
     Attributes:
-        name: A string representing the certificate reciever's name.
+        name: A string representing the certificate receiver's name.
         course: A string representing the name of the course enrolled in.
         date: A string representing the date of issue of certificate.
 		output: A string representing the name of the output file that will be generated (has to be an image file).
@@ -26,13 +26,13 @@ class Certificate:
 		"""
 
 		Configures the settings and properties necessary to create the certificate.
-		This function imports the configurations from the "config.txt" file.
+		This function imports the configurations from the "config.ini" file.
 		The different configuration options are discussed in the documentation
 
 		"""
 		config = configparser.ConfigParser()
 		try:
-			config.read("config.txt")
+			config.read("config.ini")
 			self.cert = config['SETTINGS']['TEMPLATE']
 			self.font1 = config['NAME']['NAME_FONT']
 			self.color1 = config['NAME']['NAME_COLOR']
@@ -53,7 +53,7 @@ class Certificate:
 			self.y3 = int(config['DATE']['DATE_Y'])
 			self.width3 = int(config['DATE']['DATE_WIDTH'])
 		except:
-			print("\n!! ERORR : CHECK THE CONFIG FILE !!\n")
+			print("\n!! ERROR : CHECK THE CONFIG FILE !!\n")
 			return 0
 		return 1
 
@@ -89,6 +89,6 @@ class Certificate:
 			image.save(self.output)
 			print("\n>>  CERTIFICATE GENERATED AND SAVED AS : "+self.output+ "  <<\n")
 		except:
-			print("\n!! ERORR : CERTIFICATE COULD NOT BE SAVED !!\n")
+			print("\n!! ERROR : CERTIFICATE COULD NOT BE SAVED !!\n")
 			return 0
 		return 1

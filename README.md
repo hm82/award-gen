@@ -23,7 +23,7 @@ $ pip install -r requirements.txt
 ```
 
 ## Configuration
-1. Edit Configuraton ['**config.txt**'](https://github.com/hm82/award-gen/config.txt) file. A properly configured file should look like :
+1. Edit Configuraton ['**config.ini**'](https://github.com/hm82/award-gen/config.ini) file. A properly configured file should look like :
 
 ```
 [SETTINGS]
