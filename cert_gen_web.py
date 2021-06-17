@@ -2,9 +2,6 @@ from flask import Flask, redirect, url_for, render_template, request
 from flask.helpers import send_from_directory 
 from certificate_generator import Certificate
 
-## Global variable for certificate filename
-cert_file = ""
-
 app = Flask(__name__)
 
 ## Load flask App configurations / env variables
@@ -33,6 +30,7 @@ def show_certificate():
     e_dt=request.args.get('e_dt')
     # construct the output filename
     cert_file = "certificate_"+cert_user+"_"+e_dt+".png"
+
     # Generate Certificate Based on Inputs
     cert_gen_sts = gen_certificate_image(user_name=cert_user, event_name=e_name, event_date=e_dt, event_cert_file=cert_file)
     if cert_gen_sts == True:

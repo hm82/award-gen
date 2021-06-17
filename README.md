@@ -1,5 +1,5 @@
 # Course Certificate Generator 
-Simple Certificate/Award Generator Utility Deployed as a Web App
+Simple Certificate/Award Generator Utility deployed as a Web App
 
 Simple and dynamic course/event certificate generator. Easy to use and customizable. Simply generate customized certificates by selecting template, recipient name, event/Course name and Date of event/Course. 
 
@@ -23,7 +23,7 @@ $ pip install -r requirements.txt
 ```
 
 ## Configuration
-1. Edit Configuraton ['**config.ini**'](https://github.com/hm82/award-gen/config.ini) file. A properly configured file should look like :
+1. Edit Configuration ['**config.ini**'](https://github.com/hm82/award-gen/config.ini) file. A properly configured file should look like :
 
 ```
 [SETTINGS]
@@ -66,25 +66,24 @@ DATE_WIDTH = 126
 
 ##### * can be replaced with NAME/DATE/EVENT
 
-## Running Script
-The project comes with two example test files [test.py](https://github.com/hm82/award-gen/test.py) and [test-cli.py](https://github.com/hm82/award-gen/test-cli.py).
-
-[test.py](hhttps://github.com/hm82/award-gen/test.py) : It is an example that demonstrates how **Certificate Generator** can be implemented in already existing projects.
+## Running Certificate Generator locally
+The project comes with 2 samples programs 
+2. [test.py](https://github.com/hm82/award-gen/test.py) : It is an example that demonstrates how **Certificate Generator** can be implemented in already existing projects.
 ```sh
 $ python test.py
 
->>  CERTIFICATE GENERATED AND SAVED AS : outputcertificate.png  <<
+>>  CERTIFICATE GENERATED AND SAVED AS : certificate_.png  <<
 STATUS : SUCCESSFUL
 ```
-[test-cli.py](https://github.com/hm82/award-gen/test-cli.py) : It is a cli based example that lets you test the script directly from the command line.
+2. 1. [certificate_cli.py](https://github.com/hm82/award-gen/certificate_cli.py). A CLI example to use **Certificate Generator** directly from the command line.
 
 ```sh
-$ python test-cli.py -n "" -e "AVEMGERS REBOOT" -d "1/1/2051" -o SampleCertificate.png
+$ python certificate_cli.py -n "Tony Stark" -e "AVENGERS REBOOT 2021" -d "9/9/2021" -o SampleCertificate.png
 
 ** DATA TO BE USED **
 >> NAME : Tony Stark
->> EVENT : AVENGERS REBOOT
->> DATE : 1/1/2051
+>> EVENT : AVENGERS REBOOT 2021
+>> DATE : 9/9/2021
 >> OUTPUT FILE : SampleCertificate.png
 
 !! Can we proceed? [y/n]:y
@@ -96,6 +95,7 @@ $ python test-cli.py -n "" -e "AVEMGERS REBOOT" -d "1/1/2051" -o SampleCertifica
 
 - **[PILLOW](https://pillow.readthedocs.io/en/stable/)** : For Image Processing
 - **[Configparser](https://docs.python.org/3/library/configparser.html)** : For reading config file.
+- **[Flask](https://flask.palletsprojects.com/en/2.0.x/)** : For web application
 
 ## Contributing
 All contributions/reuse are welcomed
